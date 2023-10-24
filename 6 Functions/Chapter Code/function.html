@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Functions</title>
+</head>
+<body>
+  
+  <script>
+    // let age=21;
+
+    // function printAge(){
+    //   console.log(`Your age is ${age}`);
+    // }
+
+    // //Function invoking or function calling
+    // printAge();
+    
+    // age=34;
+    // printAge();
+    // age=4;
+    // printAge();
+
+
+    //return statement will assign to a variable and print the variable
+    function generateRandomMove(){
+      let random=Math.random();
+      let randomMove=random*3;
+      return randomMove;
+    }
+    let randomMove=generateRandomMove();
+    console.log(randomMove);
+    console.log(randomMove);
+    console.log(generateRandomMove());
+
+
+    //return statement will terminate the functions
+    function determineDriveStatus(){
+      let age=21;
+      if(age === undefined){
+        return 'Enter a valid Age';
+      }
+      
+      if(age > 18){
+        return 'You can drive';
+      }else{
+        return'Use a Bicycle';
+      }
+      
+    }
+    console.log(determineDriveStatus());
+
+    //Parameters
+    function sum(a,b){
+      let sum=a+b;
+      return sum;
+    }
+    let num=sum(4,5);
+    console.log(num);
+    console.log(sum(6,7));
+
+    //Default value assigning to a function. In the time of calling a function if we can't gave any value it pass the Pyaare name as default.
+    function greeting(name='Pyaare'){
+      console.log(`Namaste ${name} uncle`);
+    }
+    greeting('Titu');  //Output Namaste Titu uncle
+  </script>
+</body>
+</html>

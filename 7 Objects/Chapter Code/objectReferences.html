@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object References</title>
+</head>
+<body>
+  
+  <script>
+
+    //Primitives
+    let a=5;
+    let b=a;
+    console.log(`a=${a}, b=${b}`);
+    a=8;
+    console.log(`a=${a}, b=${b}`);
+
+    //Objects
+    let x={num:5};
+    let y=x;
+    console.log(`x=${x.num}, y=${y.num}`);
+    x.num=8;
+    console.log(`x=${x.num}, y=${y.num}`);
+
+
+    //When comparing with == we are comparing references,not content.
+    let p={pop:'iujh'};
+    let q={pop:'iujh'};
+    console.log(p==q);
+
+    //De-structure Extract properties from objects easily.
+    let product ={
+      company: 'Mango',
+      price : 568,
+      'item-name' : 'T-Shirt',
+    };
+    let {company,price} =product;
+    console.log(company);
+    console.log(price);
+
+  </script>
+</body>
+</html>

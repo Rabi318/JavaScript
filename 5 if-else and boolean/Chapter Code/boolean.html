@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boolean</title>
+</head>
+<body>
+  
+
+
+  <script>
+    // console.log(typeof(5<8));
+    // console.log(typeof'true');
+    // console.log(typeof true);
+    // console.log(5==5)
+    // console.log(5==4)
+
+
+
+    //Loose equality.Double equals (==) will perform a type conversion when comparing two things
+    console.log(5=='5.0')      //true
+    console.log(5=='5')        //true
+
+
+
+    //Strict equality.Triple equals (===) will do the same comparison as double equals (including the special handling for NaN, -0, and +0) but without type conversion; if the types differ, false is returned.
+    console.log(5==='5.0')     //false
+    console.log(5==='5')       //false
+
+
+    
+    //Order of comparison operator is less than arithematic operators
+    console.log(4+6===5+5);    //true
+  </script>
+</body>
+</html>

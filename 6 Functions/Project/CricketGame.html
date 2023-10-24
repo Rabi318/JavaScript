@@ -1,0 +1,90 @@
+<!-- Chapter 5 cricket game will be improved using function. We are taking a function as the name generateComputerChoice(), this function will generate random numbers for the computer choice. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Cricket Game</title>
+  <style>
+    body {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <button onclick="
+  let computerChoice= generateComputerChoice(); 
+  let resultMsg = getResult('Bat',computerChoice);
+  showResult('Bat',computerChoice,resultMsg);
+  ">Bat</button>
+
+
+  <button onclick=" 
+    computerChoice= generateComputerChoice(); 
+   let rs = getResult('Ball',computerChoice);
+   showResult('Ball',computerChoice,rs);
+  ">Ball</button>
+
+
+  <button onclick="
+   computerChoice= generateComputerChoice(); 
+  let rset = getResult('Stump',computerChoice);
+  showResult('Stump', computerChoice,rset);
+  ">Stump</button>
+
+
+  <script>
+
+    function generateComputerChoice() {
+      let randomNumber = Math.random() * 3;
+
+      if (randomNumber > 0 && randomNumber <= 1) {
+        return 'Bat';
+      } else if (randomNumber > 1 && randomNumber <= 2) {
+        return 'Ball';
+      } else {
+        return 'Stump';
+      }
+    }
+
+    function getResult(userMove,computerMove){
+      if(userMove==='Bat'){
+        if(computerMove === 'Ball'){
+          return 'You Won';
+        }else if(computerMove === 'Bat'){
+          return 'It is a tie';
+        }else if(computerMove === 'Stump'){
+          return 'Computer Won';
+        }
+      }else if(userMove === 'Ball'){
+        if(computerMove === 'Ball'){
+          return 'It is a tie';
+        }else if(computerMove === 'Bat'){
+          return ' Computer Won';
+        }else if(computerMove === 'Stump'){ 
+          return 'You Won';
+        }
+
+      }else{
+        if(computerMove === 'Ball'){
+          return 'Computer Won';
+        }else if(computerMove === 'Bat'){
+          return 'You Won';
+        }else if(computerMove === 'Stump'){
+          return ' It is tie';
+        }
+
+      }
+    }
+
+    function showResult(userMove, computerMove,result){
+
+      alert(`Your choice is ${userMove}. Computer choice is ${computerMove} and ${result}`);
+    }
+  </script>
+
+</body>
+
+</html>

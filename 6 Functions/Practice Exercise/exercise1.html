@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise</title>
+</head>
+<body>
+  <script>
+
+    //WAF to check the number is even or odd
+    function isOdd(num){
+      let rem=num % 2;
+      if(rem == 0){
+        return 'Even';
+      }else{
+        return 'Odd';
+      }
+    }
+    console.log(isOdd(4)); //Even
+    console.log(isOdd(9)); //Odd
+    console.log(isOdd(23)); //Odd
+
+    //WAF to return the larger number between two number
+    function larger(num1, num2){
+      if(num1 > num2){
+        return num1;
+      }else{
+        return num2;
+      }
+    }
+    console.log(larger(6,7));     //7
+    console.log(larger(456,458));  //458
+
+
+    //Write the above function using Ternary Operator
+    function isLarge(num1,num2){
+      return num1 > num2 ? num1 : num2;
+    }
+    console.log(isLarge(78,90));
+
+
+    //Write a function to convert the Celsious to Fahrenheit
+    function toFahrenheit(celsiousValue){
+      return 9/5*celsiousValue + 32;
+    }
+    console.log(toFahrenheit(38));
+    console.log(toFahrenheit(100));
+
+  </script>
+  
+</body>
+</html>

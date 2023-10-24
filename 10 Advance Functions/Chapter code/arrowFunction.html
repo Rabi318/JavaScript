@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Function</title>
+</head>
+<body>
+  
+
+  <script>
+    
+    let sum = (num1,num2) =>{
+      return num1+num2;
+    }
+    console.log(sum(1,2));
+
+    //For single Argument: Round Brackets optional.
+    let square = num =>
+    {
+      return num*num;
+    }
+    console.log(square(3));
+
+    //For Single Line: Curly brackets and return optional.
+    let square2 = num =>num+num;
+    console.log(square2(2));
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Practice</title>
+  <style>
+    .btn-click{
+      font-size: 15px;
+      height: 20px;
+      width: 80px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .js-double{
+      font-size: 30px;
+      height: 40px;
+      width: 160px;
+    }
+  </style>
+</head>
+<body>
+  <button id="my-btn" class="btn-click" onclick="">Click me</button>
+
+  
+  <script>
+    //1.Create a variable multiply and assign a function to this variable that multiples two numbers.Call this methods from the variable.
+    let multiply=(num1,num2)=> num1*num2;
+    console.log(multiply(4,5));
+
+    //2.Create a function runTwice that takes a function as a parameter and then runs that method twice.
+    // let printGreeting =()=>console.log('Good morning');
+    // let runTwice=inputFunction =>{
+    //   inputFunction();
+    //   inputFunction();
+    // }
+    // runTwice(printGreeting);
+
+    //3.Create a button which should grow double in size on clicking after 2 seconds.
+      function doubleSize(){
+        let buttonElement=document.querySelector('.btn-click');
+        buttonElement.classList.add('js-double');
+      }
+
+    //4.In the above exercise add the behavior using an event listener instead of onClick.
+    let buttonElement=document.querySelector('.btn-click');
+    buttonElement.addEventListener('click',event =>{
+      setTimeout(doubleSize,2000);
+    })  
+
+    //5.Create a function that sums an array of numbers. Do this using a for-each loop.
+    let arr=[1,2,3,4,5];
+    let sum=0;
+    arr.forEach(num => sum +=num);
+    console.log(sum);
+
+    //6. Create a function that takes an array of numbers and return their squares using map function.
+    let squares=arr.map(num => num*num);
+    console.log(squares);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inside Object</title>
+</head>
+<body>
+  
+  <script>
+    //Objects can contain Primitives like numbers and Strings
+    //Objects can contain other objects and are called Nested Object
+    //Functions inside an object are called methods
+    //Null value: Intentionally leaving a property empty
+
+    let product = {
+      company : 'Mango',
+      price : 456,
+      item_name: 'T-shirt',
+      displayPrice: function(){
+        console.log(`Price of the product is ${this.price}`)
+      }
+    };
+    product.displayPrice();
+
+
+  </script>
+</body>
+</html>
